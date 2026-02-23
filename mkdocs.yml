@@ -4,3 +4,5 @@ theme:
 
 nav:
   - Home: index.md
+  - Second Page:
+      - Step 1: second_page/somestuff.md
