@@ -1,0 +1,76 @@
+[project]
+
+repo_url = "https://github.com/HB9HIL/testdocs"
+repo_name = "HB9HIL/testdocs"
+site_name = "HB9HIL Testdocs"
+site_description = "Testing Documentation"
+site_author = "The Wavelog Dev Team and it's community"
+site_url = "https://testdocs.hb9hil.org/"
+
+copyright = """
+Copyright &copy; 2026 Wavelog
+"""
+
+[project.theme]
+
+favicon = "images/favicon.ico"
+
+language = "en"
+
+features = [
+    "content.action.edit",
+    "content.action.view",
+    "search.suggest",
+    "search.highlight",
+    "navigation.instant",
+    "navigation.instant.progress",
+    "navigation.tracking",
+    "navigation.tabs",
+    "navigation.path",
+    "navigation.prune",
+    "navigation.indexes",
+    "navigation.top",
+]
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[project.theme.font]
+text = "Inter"
+code = "Jetbrains Mono"
+
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+
+# ----------------------------------------------------------------------------
+# You can configure your own logo to be shown in the header using the "logo"
+# option in the "icons" subsection. The logo can be a path to a file in your
+# "docs_dir" or it can be a path to an icon.
+#
+# Likewise, you can customize the logo used for the repository section of the
+# header. Zensical derives the default logo for this from the repository URL.
+# See below...
+#
+# There are other icons you can customize. See the documentation for details.
+#
+# Read more:
+# - https://zensical.org/docs/setup/logo-and-icons
+# - https://zensical.org/docs/authoring/icons-emojis/#search
+# ----------------------------------------------------------------------------
+#[project.theme.icon]
+#logo = "lucide/smile"
+#repo = "lucide/smile"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/HB9HIL/testdocs"
+
+
