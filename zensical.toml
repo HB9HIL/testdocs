@@ -11,6 +11,8 @@ copyright = """
 Copyright &copy; 2026 Wavelog
 """
 
+extra_css = ["stylesheets/extra.css"]
+
 [project.theme]
 
 favicon = "images/favicon.ico"
@@ -25,7 +27,7 @@ features = [
     "navigation.instant",
     "navigation.instant.progress",
     "navigation.tracking",
-    "navigation.tabs",
+    # "navigation.tabs",
     "navigation.path",
     "navigation.prune",
     "navigation.indexes",
