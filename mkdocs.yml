@@ -1,6 +1,21 @@
 site_name: testdocs
+site_url: testdocs.hb9hil.org
+repo_url: https://github.com/wavelog/wavelog
+plugins:
+  - search
 theme:
   name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -11,7 +26,7 @@ theme:
       scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to system preference
 
 nav:
   - Home: index.md
