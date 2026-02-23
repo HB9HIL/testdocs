@@ -1,6 +1,6 @@
 site_name: testdocs
 theme:
-  name: readthedocs
+  name: darkly
 
 nav:
   - Home: index.md
