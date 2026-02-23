@@ -1,5 +1,5 @@
 site_name: testdocs
-site_url: testdocs.hb9hil.org
+site_url: https://testdocs.hb9hil.org
 repo_url: https://github.com/wavelog/wavelog
 plugins:
   - search
