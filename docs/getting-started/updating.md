@@ -5,6 +5,23 @@ This is **NOT** how to Migrate from Cloudlog to Wavelog. If you're still using C
 
 ## Update Process
 
+### Updating via docker
+
+To update Wavelog to the latest version, run the following from your `docker-compose.yml` folder:
+
+```bash
+docker compose pull
+docker compose down
+docker compose up -d
+```
+
+This downloads the new image, stops the stack and restarts everything. Your data in the volumes is not affected.
+
+#### Updating via Portainer
+
+If you are using Portainer to manage your docker containers:  
+Go to **Stacks**, select the Wavelog stack, click **Editor** → **Deploy** and enable "Pull latest image" in the dialog.
+
 
 ### Updating via `git pull`
 

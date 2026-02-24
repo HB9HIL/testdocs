@@ -34,7 +34,7 @@ mkdir ~/wavelog && cd ~/wavelog
 ```yaml
 services:
   wavelog-db:
-    image: mariadb:11.3
+    image: mariadb:11.8
     container_name: wavelog-db
     environment:
       MARIADB_RANDOM_ROOT_PASSWORD: yes
@@ -103,22 +103,6 @@ Go through the installer. Everything important is explained there. Make sure you
     The DB Hostname is `wavelog-db` — the name of the database container in your stack, not `localhost`.
 
 Reaching the last step in the installer click **Install**. Wavelog will create its database tables and redirect you to the login page. This process can take a few minutes on slow systems!
-
-## Updating
-
-To update Wavelog to the latest version, run the following from your `docker-compose.yml` folder:
-
-```bash
-docker compose down
-docker compose pull
-docker compose up -d
-```
-
-This stops the stack, downloads the new image and restarts everything. Your data in the volumes is not affected.
-
-### Updating via Portainer
-
-Go to **Stacks**, select the Wavelog stack, click **Editor** → **Deploy** and enable "Pull latest image" in the dialog.
 
 ## Reverse proxy
 
