@@ -129,7 +129,7 @@ server {
 ```
 
 !!! tip
-    It is strongly recommended to serve Wavelog over HTTPS. See [webserver configuration](../../configuration/webserver.md) for a full example with SSL.
+    It is strongly recommended to serve Wavelog over HTTPS. See [webserver configuration](../../../admin-guide/configuration/webserver.md) for a full example with SSL.
 
 ## Advanced
 
