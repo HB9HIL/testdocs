@@ -15,7 +15,7 @@ extra_css = ["stylesheets/extra.css"]
 
 nav = [
   {"The Project" = [
-    {"The Wavelog Project" = "project/index.md"},
+    {"The Wavelog Project" = "index.md"},
     {"Contributing" = "project/contributing.md"},
     {"Code of Conduct" = "project/code-of-conduct.md"},
   ]},
@@ -171,6 +171,7 @@ features = [
     "navigation.prune",
     "navigation.top",
     "navigation.tabs",
+    "navigation.tabs.sticky",
     "toc.follow"
 ]
 

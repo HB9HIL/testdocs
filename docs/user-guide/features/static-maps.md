@@ -19,9 +19,9 @@ Options:
 
 Possible `GET` Options currently implemented:
 
-> [!NOTE]
-> All Options are optional! 
-> The `qsocount` option overrides the user option for exportmaps
+!!! note
+    All Options are optional! 
+    The `qsocount` option overrides the user option for exportmaps
 
 | option | value | default |
 |----|----|----|

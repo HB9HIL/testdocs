@@ -6,8 +6,8 @@ The Wavelog API allows you to interact with Wavelog via third-party tools, this 
 
 At any time you can come to this section and delete keys to remove access.
 
->[!NOTE]
-> Make sure not to include comments in your JSON request body. Comments in this page are only provided to help you understanding the payload syntax
+!!! note
+    Make sure not to include comments in your JSON request body. Comments in this page are only provided to help you understanding the payload syntax
 
 ## General workflow
 
@@ -79,8 +79,8 @@ Example of API response:
 
 #### Standard Radio API Call
 
-> [!TIP]
-> An example of a Python code to send radio data to Wavelog can be found [here](https://github.com/wavelog/wavelog/wiki/Radio-Interface)
+!!! tip
+    An example of a Python code to send radio data to Wavelog can be found [here](https://github.com/wavelog/wavelog/wiki/Radio-Interface)
 
 ```javascript
 {
@@ -128,11 +128,11 @@ Example of API response:
 
 #### Radio data with custom callback URL
 
-> [!NOTE]
-> This feature was introduced in Wavelog v2.1.1
+!!! note
+    This feature was introduced in Wavelog v2.1.1
 
-> [!WARNING]
-> Changing the callback URL for a radio might disrupt normal work of other application (like WavelogGate). Read more about callback URLs [here](https://github.com/wavelog/Wavelog/wiki/Radio-Interface).
+!!! warning
+    Changing the callback URL for a radio might disrupt normal work of other application (like WavelogGate). Read more about callback URLs [here](https://github.com/wavelog/Wavelog/wiki/Radio-Interface).
 
 ```javascript
 {
@@ -181,8 +181,8 @@ Returns the active profile stats that would show on the dashboard
 * Years QSOs
 * Total QSOs
 
-> [!NOTE]
-> For this to work via V2 of Wavelog and public access (i.e. not logged in) you need to provide a valid (e.g. read-only) API key in the URL. That simply needs to be set on the URL like: `https://your.wavelog.url/index.php/api/statistics/clPutYourApiKeyHere`
+!!! note
+    For this to work via V2 of Wavelog and public access (i.e. not logged in) you need to provide a valid (e.g. read-only) API key in the URL. That simply needs to be set on the URL like: `https://your.wavelog.url/index.php/api/statistics/clPutYourApiKeyHere`
 
 ### `api/station_info`
 
@@ -207,13 +207,13 @@ Returns information about stations (logbook locations) belonging to the user who
 ]
 ```
 
-> [!NOTE]
-> For this to work via V2 of Wavelog and public access (i.e. not logged in) you need to provide a valid (e.g. read-only) API key in the URL. That simply needs to be set on the URL like: `https://your.wavelog.url/index.php/api/station_info/clPutYourApiKeyHere`
+!!! note
+    For this to work via V2 of Wavelog and public access (i.e. not logged in) you need to provide a valid (e.g. read-only) API key in the URL. That simply needs to be set on the URL like: `https://your.wavelog.url/index.php/api/station_info/clPutYourApiKeyHere`
 
 ### `api/private_lookup`
 
-> [!NOTE]
-> This feature requires Wavelog version 1.8.6 or later
+!!! note
+    This feature requires Wavelog version 1.8.6 or later
 
 This api checks the (API-)owners logbook for confirmations.
 
@@ -302,8 +302,8 @@ station_ids (array!):
 
 ### `api/version`
 
-> [!NOTE]
-> This feature requires Wavelog version 2.0 or later
+!!! note
+    This feature requires Wavelog version 2.0 or later
 
 This Endpoint reports the current version of Wavelog running. A valid API-Key is required.
 
@@ -334,8 +334,8 @@ curl -X "POST" "https://<WAVELOG_URL>/api/version" \
 
 ### `api/get_wp_stats`
 
-> [!NOTE]
-> This feature requires Wavelog version 2.0.1
+!!! note
+    This feature requires Wavelog version 2.0.1
 
 This Endpoint reports statistics about number of total QSOs, for the current year and per mode.
 
@@ -416,8 +416,8 @@ curl -X "POST" "https://<WAVELOG_URL>/api/get_wp_stats" \
 
 ### `api/create_station`
 
-> [!NOTE]
-> This feature requires Wavelog version >2.1.2
+!!! note
+    This feature requires Wavelog version >2.1.2
 
 This Endpoint creates a new station_location within wavelog and tries to take care of dupes.
 
@@ -481,13 +481,13 @@ If one of both is true, this API won't create the location.
 
 ### `api/list_clubmembers`
 
-> [!NOTE]
-> This feature requires Wavelog version >2.3.1
+!!! note
+    This feature requires Wavelog version >2.3.1
 
 Returns information about members of the clubstation associated with the API key.
 
-> [!IMPORTANT]
-> API key associated with a "Club Officer" user must be used
+!!! warning
+    API key associated with a "Club Officer" user must be used
 
 Input format
 

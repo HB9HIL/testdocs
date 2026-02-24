@@ -19,8 +19,8 @@ Options:
 
 Possible `GET` Options currently implemented:
 
-> [!NOTE]
-> All Options are optional! 
+!!! note
+    All Options are optional! 
 
 | option | value | default |
 |----|----|----|

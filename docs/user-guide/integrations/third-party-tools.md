@@ -2,8 +2,8 @@
 
 Directory of all third-party tools that can integrate with Wavelog.
 
-> [!IMPORTANT]
-> Remember, these are not our work. If you need support, go to the authors pages and ask there.
+!!! warning
+    Remember, these are not our work. If you need support, go to the authors pages and ask there.
 
 # Rig Control
 

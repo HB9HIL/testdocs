@@ -2,8 +2,8 @@
 
 > Information Relating to application/config/wavelog.php
 
-> [!TIP]
-> For Docker-based setup, this file is located at `application/config/docker/wavelog.php`
+!!! tip
+    For Docker-based setup, this file is located at `application/config/docker/wavelog.php`
 
 ## Wavelog configuration file
 
@@ -40,11 +40,11 @@ $config['callbook'] = 'qrz'; // Will retrieve callsigns data from QRZ.com
 
 Starting from release 2.2.2 (to be confirmed), this callbook variable can be set to an array of values indicating the sequence of callbooks to be tested until a valid result is returned. Callbooks are tested using the same sequence as configured in the callbook configuration variable. If no data is returned from the first source, the second one is tested, and so on.
 
-> [!NOTE]
-> This does not always fetch all sources, the sequence is only respected if no data is returned at all (e.g: callsign is not registered on that service, of if the service is unreachable. 
+!!! note
+    This does not always fetch all sources, the sequence is only respected if no data is returned at all (e.g: callsign is not registered on that service, of if the service is unreachable. 
 
-> [!NOTE]
-> If an user is registered on a given service, but some details were not available, it is still considered as a "valid" result and no additional sources will be tested.
+!!! note
+    If an user is registered on a given service, but some details were not available, it is still considered as a "valid" result and no additional sources will be tested.
 
 Examples:
 
@@ -60,8 +60,8 @@ $config['callbook'] = ['hamqth', 'qrzcq', 'qrz']; // HamQTH => QRZCQ => QRZ.com
 
 If the API of the configured service returns the full name for a given callsign, this is only stored if the use_fullname option is set to `true`. 
 
-> [!WARNING]
-> As people's full name is considered a sensitive information, make sure data is secured as per GDPR regulations
+!!! warning
+    As people's full name is considered a sensitive information, make sure data is secured as per GDPR regulations
 
 ```php
 $config['use_fullname'] = false;
@@ -71,8 +71,8 @@ $config['use_fullname'] = false;
 
 Each callbok must be configured with a valid username and password to retrieve data.
 
-> [!NOTE]
-> Some services (like QRZ.com) requires a paid subscription to enable callsign lookups
+!!! note
+    Some services (like QRZ.com) requires a paid subscription to enable callsign lookups
 
 ```php
 $config['qrz_username'] = '';

@@ -1,7 +1,7 @@
 # Winkey
 
-> [!IMPORTANT]
-> Webserial will only work in Chrome, Edge and Opera. Other browsers have limited or no support for webserial.
+!!! warning
+    Webserial will only work in Chrome, Edge and Opera. Other browsers have limited or no support for webserial.
 
 Winkey support is very experimental due to it using WebSerial directly from the browser, at the moment it sometimes doesn't start the keyer correctly so you might want to start the keyer first with a different application then connect using the browser afterwards.
 

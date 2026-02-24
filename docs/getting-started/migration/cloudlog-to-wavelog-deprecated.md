@@ -1,17 +1,17 @@
 # This Tutorial is deprecated and should not be used anymore. See the explaination [here](https://github.com/wavelog/Wavelog/wiki/How-to-migrate-Cloudlog-to-Wavelog).
 
-> [!CAUTION]
-> Backup everything (Files and Database) before you make any changes !!
->
-> Follow each step precise and READ everything!
+!!! danger
+    Backup everything (Files and Database) before you make any changes !!
+
+    Follow each step precise and READ everything!
 
 A migration from Cloudlog to Wavelog is easily possible if your existing Cloudlog installation is version `2.6.7` or earlier. You don't have to make any database changes! Migration is possible at all times. **But don't worry. Even with later versions you can migrate to Wavelog!**
 Keep in mind, that you'll lose Features which were implemented after CloudLog `2.6.7`. On the other hand you'll gain much more stability, performance and way more other stuff....
 
-> [!NOTE]
-> After the migration, you should clear your browser cache or perform a hard reload in your browser:  
-> Windows: `Ctrl + F5`  
-> Mac: `Cmd + Shift + R`
+!!! note
+    After the migration, you should clear your browser cache or perform a hard reload in your browser:  
+    Windows: `Ctrl + F5`  
+    Mac: `Cmd + Shift + R`
 
 Don't forget the "Post-Migration" Steps at the end of this page.
 
@@ -37,8 +37,8 @@ Now, while editing the file `migration.php`, make sure the value of the migratio
 $config['migration_version'] = 170;
 ```
 
-> [!CAUTION]
-> If your migration version is any number BELOW 170, first update your Cloudlog Installation to the latest version.
+!!! danger
+    If your migration version is any number BELOW 170, first update your Cloudlog Installation to the latest version.
 
 Save the file with `Ctrl + X`, `Y`, and `Enter` 
 
@@ -129,13 +129,13 @@ You may want to start your webserver again, after you shut it down earlier
 systemctl restart apache2
 ```
 
-> [!IMPORTANT]
-> The first pageload after restarting apache2 can take quite a while due to database migrations and changes which are necessary and triggered by the first page load. So don't worry and be patient :)
+!!! warning
+    The first pageload after restarting apache2 can take quite a while due to database migrations and changes which are necessary and triggered by the first page load. So don't worry and be patient :)
 
-> [!NOTE]
-> After the migration, you should clear your browser cache or perform a hard reload in your browser:  
-> Windows: `Ctrl + F5`  
-> Mac: `Cmd + Shift + R`
+!!! note
+    After the migration, you should clear your browser cache or perform a hard reload in your browser:  
+    Windows: `Ctrl + F5`  
+    Mac: `Cmd + Shift + R`
 
 * Check your current configuration `application/config/config.php` and compare it against the sample config `application/config/config.sample.php`. You should make sure that your current configuration contains the same stuff as the sample config. For example you want to set `$config['app_name']` to "Wavelog".
 

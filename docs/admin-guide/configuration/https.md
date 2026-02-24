@@ -12,8 +12,8 @@ For a solution with public available SSL certificates google for "certbot" or us
 
 ---
 
-> [!IMPORTANT]
-> Please note that this is just an IDEA how you could enabled https for your docker installation. We do not offer any personal support for that. Help yourself please
+!!! warning
+    Please note that this is just an IDEA how you could enabled https for your docker installation. We do not offer any personal support for that. Help yourself please
 
 # Docker Installations
 
@@ -125,8 +125,8 @@ openssl req -new -key nginx/ssl/wavelog.key -out nginx/ssl/wavelog.csr
 openssl x509 -req -days 3650 -in nginx/ssl/wavelog.csr -signkey nginx/ssl/wavelog.key -out nginx/ssl/wavelog.crt
 rm nginx/ssl/wavelog.csr
 ``` 
-> [!IMPORTANT]
-> These certificates are only selfsigned certificates. For valid certs you have to use LetsEncrypt. Check out the internet.
+!!! warning
+    These certificates are only selfsigned certificates. For valid certs you have to use LetsEncrypt. Check out the internet.
 
 ## docker-compose.yml
 ```
@@ -224,11 +224,11 @@ $config['base_url']     = 'https://wavelog.example.com/';
 
 In the case of a normal installation you also have a webserver running. So you already use Apache2 or Nginx which can simply be reconfigured to use HTTPS instead normal HTTP.
 
-> [!NOTE]
-> We assume your installation is placed in `/var/www/html`. Change the path accordingly if you have a different location.
+!!! note
+    We assume your installation is placed in `/var/www/html`. Change the path accordingly if you have a different location.
 
-> [!IMPORTANT]
-> Make sure you created the `.htaccess` file: `cp /var/www/html/htaccess.sample /var/www/html/.htaccess`
+!!! warning
+    Make sure you created the `.htaccess` file: `cp /var/www/html/htaccess.sample /var/www/html/.htaccess`
 
 ## Apache2
 

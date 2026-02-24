@@ -1,7 +1,7 @@
 # Advanced Logbook
 
-> [!IMPORTANT]
-> The result dropdown is set to a max of 5000 QSOs listed. This is because of performance issues when adding that many lines to the table. If this number was to be increased, the browser would either be very slow, or most likely freeze.
+!!! warning
+    The result dropdown is set to a max of 5000 QSOs listed. This is because of performance issues when adding that many lines to the table. If this number was to be increased, the browser would either be very slow, or most likely freeze.
 # Things you can do in the Advanced Logbook:
 
 * Filter QSOs
@@ -23,8 +23,8 @@
 
 ## Database Tools (DBTools)
 (from version 2.2.2 - not yet released)
-> [!IMPORTANT]
-> These tools work on ALL QSOs for the user. It does NOT work on just the selected QSOS, and it is NOT per location basis.
+!!! warning
+    These tools work on ALL QSOs for the user. It does NOT work on just the selected QSOS, and it is NOT per location basis.
 
 The Database Tools module in Wavelog provides a comprehensive suite of utilities for maintaining data integrity and repairing common issues in your logbook data. These tools are accessible through the Advanced Logbook interface and are designed to help operators keep their QSO records accurate and complete.
 

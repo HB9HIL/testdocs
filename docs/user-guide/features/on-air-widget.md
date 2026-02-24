@@ -2,8 +2,8 @@
 
 On-Air widget displays on which frequency you are currently active, utilizing your [CAT radio](https://github.com/wavelog/Wavelog/wiki/Radio-Interface) connected to Wavelog.
 
-> [!WARNING]
-> Please be aware of possible privacy implications of using this widget, as this will show your current QRG in real-time.
+!!! warning
+    Please be aware of possible privacy implications of using this widget, as this will show your current QRG in real-time.
 
 ## How does it look?
 

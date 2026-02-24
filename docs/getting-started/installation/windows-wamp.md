@@ -1,11 +1,11 @@
 # Windows (WAMP)
 
-> [!IMPORTANT]
-> Running Wavelog on Windows does work, but it is not recommended. Windows was not designed with web server hosting in mind (depending on Windows version), and running the full LAMP/LEMP stack (Linux, Apache/Nginx, MySQL, PHP) natively on Windows introduces unnecessary complexity, compatibility issues, and performance overhead. Most dependencies Wavelog relies on are built and tested primarily for Linux environments, meaning you may encounter subtle bugs, missing features, or unexpected behaviour that would simply not occur on a Linux system.
+!!! warning
+    Running Wavelog on Windows does work, but it is not recommended. Windows was not designed with web server hosting in mind (depending on Windows version), and running the full LAMP/LEMP stack (Linux, Apache/Nginx, MySQL, PHP) natively on Windows introduces unnecessary complexity, compatibility issues, and performance overhead. Most dependencies Wavelog relies on are built and tested primarily for Linux environments, meaning you may encounter subtle bugs, missing features, or unexpected behaviour that would simply not occur on a Linux system.
 
 ## Installing Wavelog on Windows using a local web server
-> [!NOTE]
-> Older guides and tutorials may reference WAMP or XAMPP as the recommended local web server stack for Windows. Both projects have become increasingly outdated and are no longer actively maintained at the same pace as modern alternatives. We now recommend using [Laragon](https://laragon.org/) instead, which is actively developed, easier to configure, and provides a much smoother experience for running PHP applications like Wavelog on Windows.
+!!! note
+    Older guides and tutorials may reference WAMP or XAMPP as the recommended local web server stack for Windows. Both projects have become increasingly outdated and are no longer actively maintained at the same pace as modern alternatives. We now recommend using [Laragon](https://laragon.org/) instead, which is actively developed, easier to configure, and provides a much smoother experience for running PHP applications like Wavelog on Windows.
 
 ### Step 1: Download and Install WAMP
 
@@ -19,8 +19,8 @@ C:\wamp\www\wavelog
 
 This is where all Wavelog files will be placed after completing Step 2.
 
-> [!TIP]
-> If you want to access Wavelog from outside your local network, you will need to open **port 80** on your router (refer to your router's manual) and either know your public IP address or use a dynamic DNS service such as [No-IP](https://www.noip.com/) (free) or [DynDNS](https://dyndns.com/) (paid).
+!!! tip
+    If you want to access Wavelog from outside your local network, you will need to open **port 80** on your router (refer to your router's manual) and either know your public IP address or use a dynamic DNS service such as [No-IP](https://www.noip.com/) (free) or [DynDNS](https://dyndns.com/) (paid).
 
 ---
 
@@ -62,8 +62,8 @@ Follow the on-screen instructions. The database details are as follows:
 * Database name: wavelog
 * The default password is blank, so unless you changed it, leave it blank.
 
-> [!WARNING]
-> Remember to remove or rename the `install` folder inside your Wavelog directory after the installation is finished.
+!!! warning
+    Remember to remove or rename the `install` folder inside your Wavelog directory after the installation is finished.
 
 ---
 
@@ -77,19 +77,19 @@ http://localhost/wavelog
 
 Or, if accessing from another network, replace `localhost` with your public IP address. Log in and navigate to **ADIF Import/Export** to import your existing QSOs.
 
-> [!IMPORTANT]
-> If you have problems to upload your LoTW Certicate (P12 file) take a look at the [Troubleshooting](https://github.com/wavelog/wavelog/wiki/LoTW-P12-file-%E2%80%90-Not-possible-to-upload) on this wiki
+!!! warning
+    If you have problems to upload your LoTW Certicate (P12 file) take a look at the [Troubleshooting](https://github.com/wavelog/wavelog/wiki/LoTW-P12-file-%E2%80%90-Not-possible-to-upload) on this wiki
 
-> [!IMPORTANT]
-> QRZ Callbook lookup will not work unless you install a certificate.
->Proper fix:
->
->* Download the latest CA certificate bundle from: https://curl.se/ca/cacert.pem
->
->* Save it somewhere on your system (e.g., C:\wamp64\bin\php8.3.14\cacert.pem) (PHP version may differ, so make sure you choose correct folder)
->* Edit your php.ini file (you can access it via WAMP tray icon → PHP → php.ini)
->* Find the line ;curl.cainfo = and change it to:
->
-> inicurl.cainfo = "C:\wamp64\bin\php\cacert.pem"
->
->* Restart WAMP
+!!! warning
+    QRZ Callbook lookup will not work unless you install a certificate.
+    Proper fix:
+
+    * Download the latest CA certificate bundle from: https://curl.se/ca/cacert.pem
+
+    * Save it somewhere on your system (e.g., C:\wamp64\bin\php8.3.14\cacert.pem) (PHP version may differ, so make sure you choose correct folder)
+    * Edit your php.ini file (you can access it via WAMP tray icon → PHP → php.ini)
+    * Find the line ;curl.cainfo = and change it to:
+
+    inicurl.cainfo = "C:\wamp64\bin\php\cacert.pem"
+
+    * Restart WAMP

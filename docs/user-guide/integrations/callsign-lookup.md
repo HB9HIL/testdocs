@@ -18,11 +18,11 @@ $config['use_fullname'] = true;
 
 The username and password are the ones you use to login to QRZ.
 
-> [!TIP]
-> Do NOT use the sign '#' in your password, when use remove it .. to give good search result !
+!!! tip
+    Do NOT use the sign '#' in your password, when use remove it .. to give good search result !
 
-> [!NOTE]
-> If you want to fetch the full name (first and surname) and store it in your database, set `$config['use_fullname'} = true`, as displayed above.
+!!! note
+    If you want to fetch the full name (first and surname) and store it in your database, set `$config['use_fullname'} = true`, as displayed above.
 
 **NOTE:** even if you haven't purchased a subscription, QRZ will return the following fields via the XML interface ...
 
@@ -48,5 +48,5 @@ $config['use_fullname'] = true;
 
 The username and password are the ones you use to login to HamQTH.
 
-> [!NOTE]
-> If you want to fetch the full name (first and surname) and store it in your database, set `$config['use_fullname'} = true`, as displayed above.
+!!! note
+    If you want to fetch the full name (first and surname) and store it in your database, set `$config['use_fullname'} = true`, as displayed above.

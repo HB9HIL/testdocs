@@ -46,17 +46,17 @@ sudo apt install libapache2-mod-php
 
 Use ```php -v``` to check the installed version. Minimum Version is PHP 7.4
 
-> [!NOTE]
-> ### nginx configuration
-> If you use nginx as web server you will need to make sure that the PHP handler does serve .php correctly and not only if the address ends on `.php`. See <a href="https://github.com/magicbug/cloudlog/issues/1613" target="_blank">this issue</a>. The basic change in the config is (remove the dollar sign):
->
->```
-> 	# pass PHP scripts to FastCGI server
-> 	#
->-	location ~ \.php$ {
->+	location ~ \.php {
->```
-> ⚠️ After you have changed this value restart the nginx web server before continuing the installation.
+!!! note
+    ### nginx configuration
+    If you use nginx as web server you will need to make sure that the PHP handler does serve .php correctly and not only if the address ends on `.php`. See <a href="https://github.com/magicbug/cloudlog/issues/1613" target="_blank">this issue</a>. The basic change in the config is (remove the dollar sign):
+
+    ```
+    	# pass PHP scripts to FastCGI server
+    	#
+    -	location ~ \.php$ {
+    +	location ~ \.php {
+    ```
+    ⚠️ After you have changed this value restart the nginx web server before continuing the installation.
 
 #### Arch Linux / Manjaro Linux
 ```bash

@@ -6,8 +6,8 @@ Some Wavelog tasks are best performed on a regular schedule to keep things runni
 
 Since Version 1.6 Wavelog comes with a handy WebUI Cron Manager. An administrator can see information about the recurring jobs in the 'Admin' menu within the submenu 'Cron Manager'. The Cronmanager needs at least PHP Version 8.1 to work. 
 
-> [!IMPORTANT]
-> To get the Cron Manager working you need to set up one real cronjob which is running every minute. In a Docker Installation this is already done!
+!!! warning
+    To get the Cron Manager working you need to set up one real cronjob which is running every minute. In a Docker Installation this is already done!
 
 ```bash
 # Wavelog Master Cron
@@ -17,15 +17,15 @@ Since Version 1.6 Wavelog comes with a handy WebUI Cron Manager. An administrato
 
 After setting up this master cronjob you have to wait at least one minute before you see more details in the Cron Manager. Reload the page after waiting 60 seconds. Now you can edit the interval of the job using the common cron format ([more Info here](https://en.wikipedia.org/wiki/Cron)) or disable/enable jobs with just one click.  
 
-> [!IMPORTANT]
-> Currently, adding/removing jobs via the WebUI is not supported.
+!!! warning
+    Currently, adding/removing jobs via the WebUI is not supported.
 #### Note for plain IP adresses without valid ssl certificate (self-signed certificates)
-> [!TIP]
-> The cronmanager currently needs plain HTTP **or** HTTPS with a **valid** SSL certificate. If you use HTTPS with a self-signed certificate you need to set `$config['cron_allow_insecure'] = true;` in your `config.php`. This adds the `-k` (`--insecure`) to the curl logic. You also need to add this flag to the mastercron.
+!!! tip
+    The cronmanager currently needs plain HTTP **or** HTTPS with a **valid** SSL certificate. If you use HTTPS with a self-signed certificate you need to set `$config['cron_allow_insecure'] = true;` in your `config.php`. This adds the `-k` (`--insecure`) to the curl logic. You also need to add this flag to the mastercron.
 
 #### Important Tip for Docker Installs
-> [!TIP]
-> By default, the cronmanager uses the url configured as `$config['base_url']` within config.php when making internal calls. If this url is not reachable from the host where wavelog is installed (this could happen especially when using a [docker setup](https://github.com/wavelog/wavelog/wiki/Installation-via-Docker)) the cronmanager will fail. For such cases it is possible to configure a url which should be used for local, internal calls using `$config['local_url']` within the config.php. For a setup within a docker container this snippet would do the job:
+!!! tip
+    By default, the cronmanager uses the url configured as `$config['base_url']` within config.php when making internal calls. If this url is not reachable from the host where wavelog is installed (this could happen especially when using a [docker setup](https://github.com/wavelog/wavelog/wiki/Installation-via-Docker)) the cronmanager will fail. For such cases it is possible to configure a url which should be used for local, internal calls using `$config['local_url']` within the config.php. For a setup within a docker container this snippet would do the job:
 ```php
 $config['local_url'] = 'http://localhost/';
 ```

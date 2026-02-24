@@ -2,8 +2,8 @@
 
 Since **Version 2.0**, Wavelog has provided sophisticated support for Clubstations and Special Callsign Operations. This documentation explains everything you need to know, from setup and configuration to usage.
 
-> [!IMPORTANT]
-> This feature replaces the Operator Callsign Popup feature (config item: `'special_callsign'`).
+!!! info "Important"
+    This feature replaces the Operator Callsign Popup feature (config item: `'special_callsign'`).
 
 ---
 
@@ -53,8 +53,8 @@ To set up a Clubstation, you need to be a Wavelog Admin with access to the `conf
     In newer installations, you can find this value in **line 691**. If not, you may need to update your `config.php` manually based on `config.sample.php`.  
     If this config item was already enabled for the old "Operator Callsign Popup" feature, no changes are needed.
 
-    > [!NOTE]
-    > The config item `$config['sc_hide_usermenu']` is no longer in use.
+    !!! note
+        The config item `$config['sc_hide_usermenu']` is no longer in use.
 
 2. Go to **User Management** (Admin → User Accounts).
 

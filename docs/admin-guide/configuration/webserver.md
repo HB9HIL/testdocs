@@ -2,8 +2,8 @@
 
 Be aware that this are example configurations. You may have to adjust these configs to fit your needs. All examples are for installations where Wavelog is _**NOT**_ installed in a subfolder.
 
-> [!TIP]
-> We only enable HTTP (Port 80) configs here by default. We highly suggest you to configure your webserver with HTTPS (Port 443) and a valid certificate. One benefit next to encrypted communication (way more safe!) is that the 'KEEP LOGIN' feature, which remembers your login for 30 days is only available when using Wavelog with HTTPS. For more Information about HTTPS in Wavelog check out this page ["HTTPS Support"](https://github.com/wavelog/wavelog/wiki/HTTPS-Support)
+!!! tip
+    We only enable HTTP (Port 80) configs here by default. We highly suggest you to configure your webserver with HTTPS (Port 443) and a valid certificate. One benefit next to encrypted communication (way more safe!) is that the 'KEEP LOGIN' feature, which remembers your login for 30 days is only available when using Wavelog with HTTPS. For more Information about HTTPS in Wavelog check out this page ["HTTPS Support"](https://github.com/wavelog/wavelog/wiki/HTTPS-Support)
 
 ## Apache2
 
@@ -46,8 +46,8 @@ cp /var/www/html/htaccess.sample /var/www/html/.htaccess
 
 Just set `$config['index_page']` in your `application/config/config.php` to `''`
 
-> [!IMPORTANT]
-> Do not edit any file before Wavelog is successfully installed. The final editable file `aplication/config/config.php` is generated during the installation.
+!!! warning
+    Do not edit any file before Wavelog is successfully installed. The final editable file `aplication/config/config.php` is generated during the installation.
 
 ```php
 $config['index_page'] = '';

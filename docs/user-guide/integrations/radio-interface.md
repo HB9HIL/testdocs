@@ -26,8 +26,8 @@ After configuring the Radio, you need to select what you'd like to use for QSOs,
 
 This feature allows sending data from Wavelog to a software which is connected to one of the configured radio, allowing new functionalities like clicking an entry in the Bandmap (a.k.a. cluster) and tuning the selected radio to that frequency.
 
-> [!NOTE]
-> The callback operation is performed on the same browser where the cluster entry is clicked, this means that using 127.0.0.1 as callback URL will send the frequency set request to the same PC where Wavelog is accessed
+!!! note
+    The callback operation is performed on the same browser where the cluster entry is clicked, this means that using 127.0.0.1 as callback URL will send the frequency set request to the same PC where Wavelog is accessed
 
 Once the radio devices are properly talking with Wavelog (see the sample code snippet below, or by using any supported third-party software), and listed in the `Hardware Interfaces` page, each radio can be configured with its own callback URL by clicking the `Edit` button.
 
@@ -41,8 +41,8 @@ By default, the callback URL is the same address which is currently browsing the
 
 The following code snippet can be used to send data to the Wavelog Radio interface.
 
-> [!NOTE]
-> This is just a demonstration/testing script, it is not reading frequency from any device. A proper connection routine to the transceiver should be added and some loop or other trigger should be used to send the update to the Wavelog instance
+!!! note
+    This is just a demonstration/testing script, it is not reading frequency from any device. A proper connection routine to the transceiver should be added and some loop or other trigger should be used to send the update to the Wavelog instance
 
 ```python
 import requests
