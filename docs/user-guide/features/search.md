@@ -2,7 +2,7 @@
 
 Search is a powerful tool, to look for calls in your database or in the connected systems like qrz.com or hamqth.com. 
 
-Simply enter the call to look for in the search box and click on the search button. All matching entries of your CloudLogbook will be displayed. If there are no contacts available, but the call sign has an entry in qrz.com, these information are shown instead.
+Simply enter the call to look for in the search box and click on the search button. All matching entries of your logbook will be displayed. If there are no contacts available, but the call sign has an entry in qrz.com, these information are shown instead.
 
 If you enter parts of the call, all calls of your logbook which match the part to look for are displayed.
 
