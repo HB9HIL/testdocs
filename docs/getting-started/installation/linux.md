@@ -2,7 +2,7 @@
 
 This page will guide you through the steps required to install Wavelog onto a Linux web server that is using the LAMP stack (that's Linux, Apache, MySQL, and PHP). The specifics of your server setup can be largely up to you as there are various Linux distributions, for example. This guide will focus on [Debian](https://www.debian.org) / [Ubuntu](https://ubuntu.com) so instructions given here may not apply to other distributions.
 
-# Prerequisites
+## Prerequisites
 
 * Any modern Linux installation capable of supporting the other prerequisities.
    * Recommended:
@@ -25,10 +25,10 @@ This page will guide you through the steps required to install Wavelog onto a Li
   * Absolute minimum resolution for viewport: 1024x768 (no official support!)
   * Recommended minimum resolution of the browser viewport: >=HD
 
-# Installation
-## 1. Prepare LAMP Stack
+## Installation
+### 1. Prepare LAMP Stack
 
-### Debian
+#### Debian
 
 Installing a suitable operating system, database server and web server are tasks that are outside the scope of this guide but there are plenty of resources to help you get started. Have a look at these guides from DigitalOcean to set up either [Debian](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mariadb-php-lamp-stack-on-debian-11/) or [Ubuntu LTS](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-22-04/).
 
@@ -58,7 +58,7 @@ Use ```php -v``` to check the installed version. Minimum Version is PHP 7.4
 >```
 > ⚠️ After you have changed this value restart the nginx web server before continuing the installation.
 
-### Arch Linux / Manjaro Linux
+#### Arch Linux / Manjaro Linux
 ```bash
 # to install the LNMP stack and dependencies, you can run this command
 sudo pacman -S git nginx php-fpm php-gd php-apcu php mariadb
@@ -75,7 +75,7 @@ extension=mysqli
 ```
 
 
-## 2. Download Wavelog using Git
+### 2. Download Wavelog using Git
 
 For ease of installation and updating, it's recommended to acquire the Wavelog application files using [Git](https://git-scm.com/). Git is most likely installed already on your Linux distribution. If not, use `sudo apt-get install git` to obtain it.
 
@@ -88,7 +88,7 @@ Replace _output_directory_ with the full path to the directory where you'd like 
 `git clone --depth 1 https://github.com/wavelog/wavelog.git /var/www/html`  
 Have a look at the [[Webserver Configurations]] for more information on site configuration.
 
-## 3. Set Directory Ownership and Permissions
+### 3. Set Directory Ownership and Permissions
 
 During normal operation, Wavelog will need to write to certain files and directories within the root Wavelog directory (i.e. where you extracted the files in the previous step). You'll need to set the permissions and ownership on these directories appropriately.
 
@@ -123,7 +123,7 @@ sudo find $directory -type f -exec chmod 664 {} \;
 
 These permissions may differ on your setup!
 
-## 4. Create a SQL Database and User
+### 4. Create a SQL Database and User
 
 Wavelog needs a MySQL database to store application and user settings, along with user data such as logbooks.
 
@@ -149,20 +149,20 @@ GRANT ALL PRIVILEGES ON db_name.* TO 'user1'@'localhost';
 QUIT
 ```
 
-## 5. Configure the webserver
+### 5. Configure the Webserver
 
 Configure the webserver of your choice according to the [webserver configuration](Webserver-Configurations) page.
 
 
-## 6. Run the Wavelog Installer
+### 6. Run the Wavelog Installer
 
 You need to run the installer. At this point, please open `<url-to-wavelog>/install` and follow the guide.
 
 * If you want to know if the person you're working uses LoTW, run: `https://<URL-To-Wavelog>/index.php/update/lotw_users`. This is the initial run, but we'll run this every week from cron momentarily.
 
-# Post-Install Tasks
+## Post-Install Tasks
 
-## Create Cron Jobs to Automate Wavelog Tasks
+### Create Cron Jobs to Automate Wavelog Tasks
 You can use cron jobs to automate some of the regular Wavelog maintenance tasks. See [[Recommended Cron Jobs and Cronmanager]] for instructions.
 
 After your first login you have to set up some things in Wavelog. Just follow the warnings on the dashboard.

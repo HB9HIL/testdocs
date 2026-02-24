@@ -1,3 +1,8 @@
+/* Wider content area */
+.md-grid {
+  max-width: 95%;
+}
+
 /* Theme-based image visibility */
 [data-md-color-scheme="default"] .only-dark {
   display: none;
