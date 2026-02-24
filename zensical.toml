@@ -16,13 +16,9 @@ extra_css = ["stylesheets/extra.css"]
 nav = [
   "index.md",
   {"Getting Started" = [
-    "getting-started/at-a-glance.md",
     {"Installation" = [
       "getting-started/installation/linux.md",
       "getting-started/installation/docker.md",
-      "getting-started/installation/docker-prebuilt.md",
-      "getting-started/installation/docker-standalone.md",
-      "getting-started/installation/docker-from-scratch.md",
       "getting-started/installation/windows-wamp.md",
       "getting-started/installation/raspberry-pi.md",
       "getting-started/installation/raspberry-pi-image.md",

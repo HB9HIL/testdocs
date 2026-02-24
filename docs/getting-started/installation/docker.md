@@ -1,61 +1,35 @@
-# Docker-Support
+# Docker
 
-We're proud to provide Docker-Support now.
-You can find the latest master-Image at "Packages".
+Docker is a tool that runs applications in isolated containers. Instead of installing Wavelog and a database directly on your server, Docker manages both for you — packaged, portable and easy to update.
 
-## How to install/Use?
+This guide sets up two containers:
 
-1. Create a docker-compose-file like the one at the bottom here.
-2. Adjust the exposed port (if you like, default is 8086) and change database password (but remember them!)
-3. Run the docker compose with `docker compose up -d`.
-4. Wavelog is now online at http://[docker-machine]:[exposed-port - default 8086]/
-5. For first time installation follow the installer. Hostname for the DB is "**wavelog-db**" (unless changed). Credentials see yaml
-6. Enjoy using Wavelog
+- **`wavelog-db`** — the MariaDB database that stores all your QSOs and settings
+- **`wavelog-main`** — the Wavelog web application itself
 
-### Updating
+Both containers are defined in a single `docker-compose.yml` file and started with one command. Your data is stored in Docker volumes, so it survives container restarts and updates.
 
-1. Stop your Stack/Container
+## Prerequisites
+
+Before you start, make sure Docker is installed on your machine. You can verify this with:
 
 ```bash
-docker compose down
+docker --version
+docker compose version
 ```
-2. Repull the image
+
+If either command is not found, install them first:
+
+- [Docker Engine](https://docs.docker.com/engine/install/) (Linux) or [Docker Desktop](https://docs.docker.com/desktop/) (Windows/macOS)
+- Docker Compose is included in Docker Desktop and available as a plugin for Linux
+
+## Step 1 — Create the compose file
+
+Create a new folder for Wavelog and save the following as `docker-compose.yml` inside it:
 
 ```bash
-docker compose pull
+mkdir ~/wavelog && cd ~/wavelog
 ```
-
-3. Start it
-
-```bash
-docker compose up -d
-```
-
-> [!TIP]
-> Did you know? Adding [Watchtower](https://containrrr.dev/watchtower/) to your stack keeps Wavelog automatically updated!
-
-### Tweaking `config.php` for QRZ.com access
-
-1. Edit the config.php (located in the volume `wavelog-config`)
-
-### On-Top-Informations
-
-#### Debugging
-
-1. Basic logging is available with: `docker logs --follow [container-id]` (Obtain container-id via your UI or `docker ps -a`)
-2. raise `loglevel` in the file `config.php` (see **tweaking config.php** above) and tail the log (you can get a shell access to the container with `docker exec -it [container-id] bash`) - logs are located at `./application/logs`
-
-#### Cronjobs
-
-In the Docker version of Wavelog is the Cronmanager enabled per default. You can manage the cronjobs in de WebUI via Admin > Cronmanager
-
-### Questions?
-
-Check out our [discussions area](https://github.com/wavelog/wavelog/discussions)! .
-
----
-
-### docker-compose.yaml
 
 ```yaml
 services:
@@ -93,34 +67,115 @@ volumes:
   wavelog-config:
 ```
 
-## Reverse proxy
+!!! warning "Change the password"
+    Replace `wavelog` in `MARIADB_PASSWORD` with a strong password **before** starting the stack. You will need it during setup.
 
-If you run an application in a private container network, you may need to proxy traffic to it using a reverse proxy or a DNAT rule. Since a reverse proxy is more useful if you have multiple services, here is an example nginx config to reverse proxy:
+## Step 2 — Start the stack
+
+Run the following command from the folder where your `docker-compose.yml` is located:
+
+```bash
+docker compose up -d
+```
+
+The `-d` flag runs the containers in the background. Docker will download the images on first run, which may take a minute. Once complete, check that both containers are running:
+
+```bash
+docker ps
+```
+
+You should see `wavelog-db` and `wavelog-main` listed with status `Up`.
+
+## Step 3 — Run the installer
+
+Open your browser and navigate to:
 
 ```
+http://[your-server-ip]:8086/install
+```
+
+Fill in the setup form as follows:
+
+| Field | Value |
+|---|---|
+| Directory | *(leave blank)* |
+| Website | *(pre-filled — leave as is)* |
+| Default gridsquare | Your home QTH locator (e.g. `JN47`) |
+| DB Hostname | `wavelog-db` |
+| DB User | `wavelog` |
+| DB Password | The password you set in `docker-compose.yml` |
+| DB Name | `wavelog` |
+
+Click **Install**. Wavelog will create its database tables and redirect you to the login page.
+
+!!! note
+    The DB Hostname is `wavelog-db` — the name of the database container in your stack, not `localhost`.
+
+## Updating
+
+To update Wavelog to the latest version, run the following from your `docker-compose.yml` folder:
+
+```bash
+docker compose down
+docker compose pull
+docker compose up -d
+```
+
+This stops the stack, downloads the new image and restarts everything. Your data in the volumes is not affected.
+
+### Updating via Portainer
+
+Go to **Stacks**, select the Wavelog stack, click **Editor** → **Deploy** and enable "Pull latest image" in the dialog.
+
+## Reverse proxy
+
+By default, Wavelog is accessible on port `8086`. If you want to serve it on a proper domain (e.g. `wavelog.example.com`) you need a reverse proxy. Here is a minimal nginx configuration:
+
+```nginx
 server {
-    listen  *:80;
-    server_name  wavelog.example.com;
+    listen 80;
+    server_name wavelog.example.com;
+
     location / {
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto $scheme;
-        # this needs to be the location how nginx can access your container - either hostname or IP address
-        proxy_pass http://wavelog-container.example.com:8086;
+        proxy_pass http://127.0.0.1:8086;
     }
 
-    # nginx still need to serve error pages - for example if your container is down
-    error_page   500 502 503 504  /50x.html;
+    error_page 500 502 503 504 /50x.html;
     location = /50x.html {
-        root   /usr/share/nginx/html;
+        root /usr/share/nginx/html;
     }
 }
 ```
 
-It is recommended to support https. See [webserver configuration](Webserver-Configurations) for a more detailed example config.
+!!! tip
+    It is strongly recommended to serve Wavelog over HTTPS. See [webserver configuration](../../configuration/webserver.md) for a full example with SSL.
 
-## Database connection
+## Advanced
 
-Once you access your Wavelog installation, you will have to provide information to the database within the install wizard.
-As per the docker compose file, your database name is 'wavelog', your user and password are 'wavelog' as well (Make sure to change at least the password). Your hostname for the database is 'wavelog-db', just as the service name. If you change the service name, so will the host of the database.
+### Tweaking config.php
+
+Some settings such as callbook API keys or the log level are configured in `config.php`, which lives in the `wavelog-config` volume. To edit it, open a shell inside the running container:
+
+```bash
+docker exec -it wavelog-main bash
+nano /var/www/html/application/config/docker/config.php
+```
+
+### Debugging
+
+If something is not working, check the container logs first:
+
+```bash
+# Stream live logs from the Wavelog container
+docker logs --follow wavelog-main
+```
+
+For more detail, raise the `log_threshold` value in `config.php` (see above). Application logs are then written to `/var/www/html/application/logs` inside the container.
+
+### Cronjobs
+
+The cron manager is enabled by default in the Docker image. Jobs can be managed in the web UI under **Admin → Cron Manager** — no manual crontab setup required.
