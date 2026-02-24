@@ -24,6 +24,8 @@ Wavelog sits on top of a web server, commonly known as <a href="https://en.wikip
 **M** ySQL relational database and the  
 **P** HP language. 
 
+On the application side, Wavelog is built on [CodeIgniter 3](https://codeigniter.com/) as its PHP framework, [Bootstrap](https://getbootstrap.com/) for the responsive UI and [jQuery](https://jquery.com/) for client-side interactivity. While CodeIgniter 3 is a mature framework, it has proven to be a solid and reliable foundation for Wavelog. A migration to CodeIgniter 4 is not on the current roadmap.
+
 Please note that hosting Wavelog requires a minimum understanding of LAMP and troubleshooting errors. Without this knowledge, users may find it challenging to manage the interface and connected services.
 
 !!! note "Tipp: German/Deutsch"  
@@ -31,4 +33,11 @@ Please note that hosting Wavelog requires a minimum understanding of LAMP and tr
 
 ## History
 
-The work on this project started at the end of 2023 as a spin-off of the well-known amateur radio software Cloudlog. The four core developers – DF2ET, DJ7NT, HB9HIL and LA8AJA – who have pushed Cloudlog forward for months and years, decided to continue their work in a fork that led to Wavelog. Since its initial release on February 1, 2024, Wavelog has made tremendous progress in terms of stability and functionality. We are proud that Wavelog is developed by radio amateurs for radio amateurs, without commercial motives, but out of pure passion for the hobby. Every line of code is the result of hard work to continuously improve this piece of great code. Wavelog stands for its simplicity, powerful tools, and open-source code. As a web application, Wavelog offers the great advantage of being accessible from anywhere in the world. Whether on a professional server, rented webspace or a RaspberryPi at home, Wavelog makes it possible to manage your logbook anytime, anywhere. Try it yourself and experience improved web-based logging on your server.
+The work on this project started at the end of 2023 as a spin-off of the well-known amateur radio software Cloudlog. The four core developers – DF2ET, DJ7NT, HB9HIL and LA8AJA – who have pushed Cloudlog forward for months and years, decided to continue their work in a fork that led to Wavelog. Since its initial release on February 1, 2024, Wavelog has made tremendous progress in terms of stability and functionality. We are proud that Wavelog is developed by radio amateurs for radio amateurs, without commercial motives, but out of pure passion for the hobby. Every line of code is the result of hard work to continuously improve this piece of great code. Wavelog is known for its simplicity, powerful tools and open-source code. As a web application, Wavelog offers the great advantage of being accessible from anywhere in the world. Whether on a professional server, rented webspace or a RaspberryPi at home, Wavelog makes it possible to manage your logbook anytime, anywhere. Try it yourself and experience improved web-based logging on your server.
+
+## Links
+
+- [Official Website](https://www.wavelog.org)
+- [GitHub Repository](https://github.com/wavelog/wavelog)
+- [Translations Platform](https://translate.wavelog.org)
+- [Status Page](https://status.wavelog.org)
