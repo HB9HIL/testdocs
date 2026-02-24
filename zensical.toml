@@ -31,7 +31,6 @@ nav = [
     ]},
     "getting-started/updating.md",
     "getting-started/hints-and-tips.md",
-    "getting-started/changelog.md",
     "getting-started/version-info.md",
   ]},
   {"Configuration" = [
