@@ -30,11 +30,9 @@ nav = [
     ]},
     "getting-started/updating.md",
     "getting-started/hints-and-tips.md",
-    {"Migration" = [
-      "getting-started/migration/cloudlog-to-wavelog.md",
-      "getting-started/migration/restore-cloudlog-sql.md",
-      "getting-started/migration/cloudlog-to-wavelog-deprecated.md",
-    ]},
+    {"Migrate Cloudlog to Wavelog" = [
+      {"Guide" = "getting-started/migration/cloudlog-to-wavelog.md"},
+    ]}
   ]},
   {"User Guide" = [
     {"Logbook" = [
