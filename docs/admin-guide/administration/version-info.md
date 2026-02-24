@@ -1,7 +1,5 @@
 ## Version Info
 
-
-
 The **Version Info** introduces a feature in Wavelog to display current release information or messages from the admin directly to users. There are various ways to customize, show, and hide this dialog. Customizing the Version Info is reserved for administrators. In the global options, admins can choose the following display modes (Version Info Mode):
 
 - **Only Release Notes:** Only the information from the latest release is fetched directly from Github and displayed.

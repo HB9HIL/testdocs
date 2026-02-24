@@ -15,8 +15,9 @@ extra_css = ["stylesheets/extra.css"]
 
 nav = [
   {"The Project" = [
-    "project/index.md",
-    "project/version-info.md",
+    {"The Wavelog Project" = "project/index.md"},
+    {"Contributing" = "project/contributing.md"},
+    {"Code of Conduct" = "project/code-of-conduct.md"},
   ]},
   {"Getting Started" = [
     {"Installation" = [
@@ -132,6 +133,7 @@ nav = [
       "admin-guide/administration/error-logging.md",
       "admin-guide/administration/password-reset.md",
       "admin-guide/administration/server-migration.md",
+      "admin-guide/administration/version-info.md",
     ]},
   ]},
   {"Developer" = [
