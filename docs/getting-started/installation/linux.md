@@ -1,4 +1,4 @@
-# Installation on Linux
+# Linux
 
 This page will guide you through the steps required to install Wavelog onto a Linux web server that is using the LAMP stack (that's Linux, Apache, MySQL, and PHP). The specifics of your server setup can be largely up to you as there are various Linux distributions, for example. This guide will focus on [Debian](https://www.debian.org) / [Ubuntu](https://ubuntu.com) so instructions given here may not apply to other distributions.
 

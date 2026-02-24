@@ -1,4 +1,4 @@
-# Installation on FreeBSD
+# FreeBSD
 
 This page will guide you through the steps required to install Wavelog onto a FreeBSD web server that is using the FAMP stack (that's FreeBSD, Apache, MySQL, and PHP). The installation procedure does also apply for installing Wavelog in a Jail.
 

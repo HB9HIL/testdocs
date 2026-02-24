@@ -1,4 +1,4 @@
-# Installation on Windows Server (WAMP)
+# Windows (WAMP)
 
 > [!IMPORTANT]
 > Running Wavelog on Windows does work, but it is not recommended. Windows was not designed with web server hosting in mind (depending on Windows version), and running the full LAMP/LEMP stack (Linux, Apache/Nginx, MySQL, PHP) natively on Windows introduces unnecessary complexity, compatibility issues, and performance overhead. Most dependencies Wavelog relies on are built and tested primarily for Linux environments, meaning you may encounter subtle bugs, missing features, or unexpected behaviour that would simply not occur on a Linux system.

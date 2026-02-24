@@ -1,4 +1,4 @@
-## DietPi Installation & Wavelog requirements installation
+# DietPi Installation & Wavelog requirements installation
 
 Wavelog has been tested on a Raspberry Pi Zero W, Raspberry Pi 3 and a 4B. It can be installed in the normal manner described in the Linux installation. A variation is to use the DietPi distribution which can automate many of the installation steps for you.
 

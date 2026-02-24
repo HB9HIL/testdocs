@@ -1,6 +1,6 @@
-# Docker
+# Docker (recommended)
 
-Docker is a tool that runs applications in isolated containers. Instead of installing Wavelog and a database directly on your server, Docker manages both for you — packaged, portable and easy to update.
+Docker is a tool that runs applications in isolated containers. Instead of installing Wavelog and a database directly on your server, Docker manages both for you — packaged, portable and easy to update. It is our recommended installation method, as it reduces maintenance effort and makes future updates straightforward.
 
 This guide sets up two containers:
 
@@ -67,8 +67,8 @@ volumes:
   wavelog-config:
 ```
 
-!!! warning "Change the password"
-    Replace `wavelog` in `MARIADB_PASSWORD` with a strong password **before** starting the stack. You will need it during setup.
+!!! danger "Change the password"
+    Replace `wavelog` in `MARIADB_PASSWORD` with a strong password **before** starting the stack. You will need it during setup. MariaDB configures itself at the first start with this password. Therefore it has to be set before you start the container.
 
 ## Step 2 — Start the stack
 
@@ -81,35 +81,28 @@ docker compose up -d
 The `-d` flag runs the containers in the background. Docker will download the images on first run, which may take a minute. Once complete, check that both containers are running:
 
 ```bash
-docker ps
+docker ps -a
 ```
 
 You should see `wavelog-db` and `wavelog-main` listed with status `Up`.
 
 ## Step 3 — Run the installer
 
-Open your browser and navigate to:
+Open your browser and navigate to this URL:
+
+!!! note "Reverse Proxy in place?"
+    If you have an reverse proxy in place you might want to directly call the final URL since Wavelog will configure itself to the URL you are calling the installer. Although it can be changed later you have save the extra work and call the final URL diretcly. 
 
 ```
 http://[your-server-ip]:8086/install
 ```
 
-Fill in the setup form as follows:
+Go through the installer. Everything important is explained there. Make sure you read the stuff and understand.
 
-| Field | Value |
-|---|---|
-| Directory | *(leave blank)* |
-| Website | *(pre-filled — leave as is)* |
-| Default gridsquare | Your home QTH locator (e.g. `JN47`) |
-| DB Hostname | `wavelog-db` |
-| DB User | `wavelog` |
-| DB Password | The password you set in `docker-compose.yml` |
-| DB Name | `wavelog` |
-
-Click **Install**. Wavelog will create its database tables and redirect you to the login page.
-
-!!! note
+!!! info
     The DB Hostname is `wavelog-db` — the name of the database container in your stack, not `localhost`.
+
+Reaching the last step in the installer click **Install**. Wavelog will create its database tables and redirect you to the login page. This process can take a few minutes on slow systems!
 
 ## Updating
 

@@ -1,4 +1,4 @@
-# Installation on OpenBSD
+# OpenBSD
 
 This page will guide you through the steps required to install Wavelog onto an OpenBSD web server that is using the OHMP stack (that's OpenBSD, httpd, MariaDB and PHP). Most of the text has been taken from the page [Installation on a FreeBSD Server](https://github.com/wavelog/Wavelog/wiki/Installation-on-a-FreeBSD-Server) and adapted to OpenBSD.
 

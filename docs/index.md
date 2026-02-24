@@ -1,4 +1,4 @@
-# The Wavelog Project
+# 
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/wavelog/wavelog/refs/heads/master/assets/logo/wavelog_logo_default.png" width="400" class="only-light" />
