@@ -49,7 +49,7 @@ See the [Style Guide](../developer/style-guide.md) for frontend conventions.
 - Write in clear, plain English. Avoid jargon where possible.
 - Use admonition blocks (`!!! note`, `!!! tip`, `!!! warning`) for important callouts. See examples here in the [Zensical Docs](https://zensical.org/docs/authoring/admonitions/#supported-types)
 - Screenshots are welcome but must be kept up to date — prefer text instructions where practical.
-- Relative links between pages, not absolute URLs.
+- Relative links between pages, not absolute URLs. Please use `<a href="path/to/page.md">Link Text</a>` for links to other documentation pages. Add `target="_blank" rel="noopener noreferrer"` for external links.
 
 ## Local Documentation Preview
 

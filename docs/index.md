@@ -1,5 +1,9 @@
 # 
 
+!!! info "Welcome to the new Wiki of Wavelog!"
+    25th Februrary 2026  
+    This wiki is currently under construction (and probably will be forever). We are working hard to fill it with useful information and guides. We know that there are a lot of outdated pages from the old wiki. Updating and rewriting them is a huge task, but we are doing our best to get it done as soon as possible. If you want to help us with this, please feel free to contribute. You can find more information about how to contribute in the <a href="project/contributing.md#documentation-guidelines">Contributing</a> page. Thank you for your patience and support!
+
 <p align="center">
 <img src="https://raw.githubusercontent.com/wavelog/wavelog/refs/heads/master/assets/logo/wavelog_logo_default.png" width="400" class="only-light" />
 <img src="https://raw.githubusercontent.com/wavelog/wavelog/refs/heads/master/assets/logo/wavelog_logo_darkly.png" width="400" class="only-dark" />
@@ -24,7 +28,7 @@ Wavelog sits on top of a web server, commonly known as <a href="https://en.wikip
 **M** ySQL relational database and the  
 **P** HP language. 
 
-On the application side, Wavelog is built on [CodeIgniter 3](https://codeigniter.com/) as its PHP framework, [Bootstrap](https://getbootstrap.com/) for the responsive UI and [jQuery](https://jquery.com/) for client-side interactivity. While CodeIgniter 3 is a mature framework, it has proven to be a solid and reliable foundation for Wavelog. A migration to CodeIgniter 4 is not on the current roadmap.
+On the application side, Wavelog is built on <a href="https://codeigniter.com/" target="_blank" rel="noopener noreferrer">CodeIgniter 3</a> as its PHP framework, <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a> for the responsive UI and <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">jQuery</a> for client-side interactivity. While CodeIgniter 3 is a mature framework, it has proven to be a solid and reliable foundation for Wavelog. A migration to CodeIgniter 4 is not on the current roadmap.
 
 Please note that hosting Wavelog requires a minimum understanding of LAMP and troubleshooting errors. Without this knowledge, users may find it challenging to manage the interface and connected services.
 
@@ -37,7 +41,7 @@ The work on this project started at the end of 2023 as a spin-off of the well-kn
 
 ## Some Links
 
-- [Official Website](https://www.wavelog.org)
-- [GitHub Repository](https://github.com/wavelog/wavelog)
-- [Translations Platform](https://translate.wavelog.org)
-- [Status Page](https://status.wavelog.org)
+- <a href="https://www.wavelog.org" target="_blank" rel="noopener noreferrer">Official Website</a>
+- <a href="https://github.com/wavelog/wavelog" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+- <a href="https://translate.wavelog.org" target="_blank" rel="noopener noreferrer">Translations Platform</a>
+- <a href="https://status.wavelog.org" target="_blank" rel="noopener noreferrer">Status Page</a>
