@@ -33,7 +33,7 @@ On the application side, Wavelog is built on <a href="https://codeigniter.com/" 
 Please note that hosting Wavelog requires a minimum understanding of LAMP and troubleshooting errors. Without this knowledge, users may find it challenging to manage the interface and connected services.
 
 !!! note "Tipp: German/Deutsch"  
-    Für deutsche Nutzer steht ein praxisorientiertes Handbuch von DG9VH zur Verfügung: <a href="https://wiki.dg9vh.de/_media/wavelog_nutzerhandbuch:das_wavelog_nutzerhandbuch.pdf" target="_blank">Zum Handbuch</a> Dies ist im Rahmen der DARC Instanz von Wavelog entstanden und wird ständig aktualisiert. Das Wavelog Team hat keinen Einfluss auf den Inhalt des Handbuchs und kann keine Garantie für die Richtigkeit der Informationen geben.
+    Für deutsche Nutzer steht ein praxisorientiertes Handbuch von DG9VH zur Verfügung: <a href="https://wiki.dg9vh.de/wavelog_nutzerhandbuch:start" target="_blank">Zum Handbuch</a> Dies ist im Rahmen der DARC Instanz von Wavelog entstanden und wird ständig aktualisiert. Das Wavelog Team hat keinen Einfluss auf den Inhalt des Handbuchs und kann keine Garantie für die Richtigkeit der Informationen geben.
 
 ## History
 
