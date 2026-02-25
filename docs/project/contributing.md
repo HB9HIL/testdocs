@@ -67,7 +67,7 @@ The documentation will be available at `http://127.0.0.1:8000`.
 
 ## Translations
 
-Wavelog translations are managed on the [Translations Platform](https://translate.wavelog.org). If you want to translate the application into your language, register there — no coding knowledge required.
+How to help translating is described here in the [Translations Guide](../developer/translations.md).
 
 ## Questions?
 

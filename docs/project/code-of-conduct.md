@@ -36,7 +36,7 @@ This Code of Conduct applies within all project spaces — GitHub repositories, 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainers via the contact information on [wavelog.org](https://www.wavelog.org). All complaints will be reviewed and investigated promptly and fairly. Maintainers are obligated to respect the privacy and security of the reporter.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the project maintainers via the contact information on [www.wavelog.org](https://www.wavelog.org). All complaints will be reviewed and investigated promptly and fairly. Maintainers are obligated to respect the privacy and security of the reporter.
 
 ## Enforcement Guidelines
 
