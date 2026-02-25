@@ -3,12 +3,14 @@
 Wavelog is able to be accessible from different URL's. If your Wavelog instance should only be accessible by one domain you can use the default configuration which is set in your `config.php`. Special thanks to [@adilinden](https://github.com/adilinden) in this [discussion](https://github.com/wavelog/wavelog/discussions/2930) for the idea starter!
 
 ```php
+<?php
 $config['base_url']	= 'https://wavelog.example.com/';
 ```
 
 However in some cases you want your Wavelog instance make accessible from different domains you can replace the line with this:
 
 ```php
+<?php
 $config['base_url'] = call_user_func(function () {
     // Whitelist of allowed domains for this Wavelog instance
     // Ignore the port here. It's just about domain/subdomain
