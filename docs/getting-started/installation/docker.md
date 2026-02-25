@@ -131,16 +131,14 @@ server {
 !!! tip
     It is strongly recommended to serve Wavelog over HTTPS. See [webserver configuration](../../../admin-guide/configuration/webserver.md) for a full example with SSL.
 
-## Advanced
+## Next steps
 
 ### Tweaking config.php
 
-Some settings such as callbook API keys or the log level are configured in `config.php`, which lives in the `wavelog-config` volume. To edit it, open a shell inside the running container:
+Check out the [configuration guide](../../../admin-guide/configuration/config-php.md) to find out how to tweak `config.php` for your needs. 
+In a docker setup you will find the config file __after__ the installation in the `wavelog-config` volume. You can edit it there. A restart of the `wavelog-main` container is not required, changes are applied immediately.
 
-```bash
-docker exec -it wavelog-main bash
-nano /var/www/html/application/config/docker/config.php
-```
+This file must not exist before the installation, otherwise the installer will not run. During the installation, it is copied to the right place and can be edited there. If you want to reset the installation, see the guide here: [Resetting the installation](../../../admin-guide/maintenance/reset.md).
 
 ### Debugging
 

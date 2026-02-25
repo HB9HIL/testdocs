@@ -133,6 +133,9 @@ nav = [
       "admin-guide/administration/server-migration.md",
       "admin-guide/administration/version-info.md",
     ]},
+    {"Maintenance" = [
+      "admin-guide/maintenance/reset.md",
+    ]},
   ]},
   {"Developer" = [
     "developer/api.md",
